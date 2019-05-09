@@ -19,6 +19,14 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
@@ -48,7 +56,7 @@ extension ViewController:  UITableViewDelegate {
             self.navigationController?.pushViewController(RandomWalkViewController(), animated: true)
             break
         case .LifeGame:
-            break
+            self.navigationController?.pushViewController(LifeGameViewController(), animated: true)
         }
     }
 }
