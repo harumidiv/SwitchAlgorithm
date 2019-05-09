@@ -16,6 +16,7 @@
 		0D081FA22284408F00B74D86 /* SwitchAlgorithmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D081FA12284408F00B74D86 /* SwitchAlgorithmUITests.swift */; };
 		0D081FB12284439500B74D86 /* UICollor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D081FB02284439500B74D86 /* UICollor+Addition.swift */; };
 		0D081FB422846F2600B74D86 /* ColorSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D081FB322846F2600B74D86 /* ColorSwitchViewController.swift */; };
+		0D081FB62284731900B74D86 /* RandomWalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D081FB52284731900B74D86 /* RandomWalkViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0D081FA32284408F00B74D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D081FB02284439500B74D86 /* UICollor+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollor+Addition.swift"; sourceTree = "<group>"; };
 		0D081FB322846F2600B74D86 /* ColorSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwitchViewController.swift; sourceTree = "<group>"; };
+		0D081FB52284731900B74D86 /* RandomWalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWalkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				0D081FB322846F2600B74D86 /* ColorSwitchViewController.swift */,
+				0D081FB52284731900B74D86 /* RandomWalkViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D081FB62284731900B74D86 /* RandomWalkViewController.swift in Sources */,
 				0D081FB12284439500B74D86 /* UICollor+Addition.swift in Sources */,
 				0D081F842284408D00B74D86 /* ViewController.swift in Sources */,
 				0D081FB422846F2600B74D86 /* ColorSwitchViewController.swift in Sources */,

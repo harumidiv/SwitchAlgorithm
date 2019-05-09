@@ -18,6 +18,7 @@ class ColorSwitchViewController: UIViewController {
     var colorSwitch = UISwitch()
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Color"
         
         colorSwitch.layer.position = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
         let scaleX = self.view.frame.width/colorSwitch.bounds.size.width

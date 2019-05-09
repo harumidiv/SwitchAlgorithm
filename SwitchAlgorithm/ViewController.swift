@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
    
-    let item: [ScleenType] = [.ColorSwitch, .LifeSwitch, .RandomWalk]
+    let item: [ScleenType] = [.Color,.RandomWalk, .LifeGame]
 
     override func loadView() {
         let tableView = UITableView()
@@ -40,20 +40,21 @@ extension ViewController: UITableViewDataSource {
 }
 extension ViewController:  UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         switch item[indexPath.row] {
-        case .ColorSwitch:
-            let vc = ColorSwitchViewController()
-            self.present(vc, animated: true, completion: nil)
+        case .Color:
+            self.navigationController?.pushViewController(ColorSwitchViewController(), animated: true)
         case .RandomWalk:
+            self.navigationController?.pushViewController(RandomWalkViewController(), animated: true)
             break
-        case .LifeSwitch:
+        case .LifeGame:
             break
         }
     }
 }
 
 enum ScleenType: String {
-    case ColorSwitch = "ColorSwitch"
+    case Color = "Color"
     case RandomWalk = "RandomWalk"
-    case LifeSwitch = "LifeSwitch"
+    case LifeGame = "LifeGame"
 }
