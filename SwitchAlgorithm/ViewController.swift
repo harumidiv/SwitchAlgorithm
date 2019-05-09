@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let item = ["ColorSwitch","RandomWalk", "LifeSwitch"]
+   
+    let item: [ScleenType] = [.ColorSwitch, .LifeSwitch, .RandomWalk]
 
     override func loadView() {
         let tableView = UITableView()
@@ -25,16 +26,34 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return item.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = item[indexPath.row]
+        cell.textLabel?.text = item[indexPath.row].rawValue
         cell.accessoryType = .disclosureIndicator
         return cell
     }
 }
+extension ViewController:  UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch item[indexPath.row] {
+        case .ColorSwitch:
+            let vc = ColorSwitchViewController()
+            self.present(vc, animated: true, completion: nil)
+        case .RandomWalk:
+            break
+        case .LifeSwitch:
+            break
+        }
+    }
+}
 
+enum ScleenType: String {
+    case ColorSwitch = "ColorSwitch"
+    case RandomWalk = "RandomWalk"
+    case LifeSwitch = "LifeSwitch"
+}
