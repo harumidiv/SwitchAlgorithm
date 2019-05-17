@@ -8,9 +8,16 @@
 
 import UIKit
 
+enum ScleenType: String {
+    case Color = "Color"
+    case RandomWalk = "RandomWalk"
+    case LifeGame = "LifeGame"
+    case Fibonacci = "Fibonacci"
+}
+
 class ViewController: UIViewController {
    
-    let item: [ScleenType] = [.Color,.RandomWalk, .LifeGame]
+    let item: [ScleenType] = [.Color,.RandomWalk, .LifeGame, .Fibonacci]
 
     override func loadView() {
         let tableView = UITableView()
@@ -57,12 +64,8 @@ extension ViewController:  UITableViewDelegate {
             break
         case .LifeGame:
             self.navigationController?.pushViewController(LifeGameViewController(), animated: true)
+        case .Fibonacci:
+            self.navigationController?.pushViewController(FibonacciViewController(), animated: true)
         }
     }
-}
-
-enum ScleenType: String {
-    case Color = "Color"
-    case RandomWalk = "RandomWalk"
-    case LifeGame = "LifeGame"
 }
